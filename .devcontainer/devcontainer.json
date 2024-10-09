@@ -1,0 +1,16 @@
+cat << EOF > .devcontainer/devcontainer.json
+{
+    "name": "C# (.NET) and Docker",
+    "image": "mcr.microsoft.com/devcontainers/dotnet:7.0",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+    "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-azuretools.vscode-docker"
+    ],
+    "remoteUser": "vscode"
+}
+EOF
+
+echo "Configuración completada. Verifica el contenido de .devcontainer/devcontainer.json"
